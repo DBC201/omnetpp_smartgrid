@@ -148,7 +148,7 @@ namespace std {
 
    %template(IntSet) set<int>;
 
-   specialize_std_map_on_both(int,,,,int,,,);
+   //specialize_std_map_on_both(int,,,,int,,,);
    %template(IntIntMap) map<int,int>;
 
    %template(IntVector) vector<int>;

@@ -448,9 +448,10 @@ CHECK_RESULTFILE_FORMAT_EXCEPTION(VectorFileIndexer::generateIndex)
    }
 %}
 
+%template(EntryVector) std::vector<omnetpp::scave::VectorDatum>;
 namespace omnetpp { namespace scave {
 
-%template(EntryVector) ::std::vector<omnetpp::scave::VectorDatum>;
+// %template(EntryVector) ::std::vector<omnetpp::scave::VectorDatum>;
 
 } } // namespaces
 
