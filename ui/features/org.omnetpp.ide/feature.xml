@@ -60,7 +60,8 @@
          version="0.0.0"
          fragment="true"/>
 
-   <plugin
+   <!-- Commenting out below builds due to shared library errors -->
+   <!-- <plugin
          id="org.omnetpp.ide.nativelibs.linux.aarch64"
          os="linux"
          arch="aarch64"
@@ -84,7 +85,7 @@
          download-size="0"
          install-size="0"
          version="0.0.0"
-         fragment="true"/>
+         fragment="true"/> -->
 
    <plugin
          id="org.omnetpp.inifile.editor"

@@ -146,8 +146,8 @@
                   <phase>process-sources</phase>
                   <configuration>
                   <target>
-                     <replace dir="." token="##VERSION##" value="${VERSION}" />
-                     <replace dir="." token="##BUILDID##" value="${BUILDID}" />
+                     <replace dir="." token="${VERSION}" value="${VERSION}" />
+                     <replace dir="." token="${BUILDID}" value="${BUILDID}" />
                      <!-- in org.omnetpp.common -->
                      <replace dir="." token="IS_COMMERCIAL = true;" value="IS_COMMERCIAL = false;">
                         <include name="**/*.java" />
@@ -185,8 +185,8 @@
                   <phase>process-sources</phase>
                   <configuration>
                   <target>
-                     <replace dir="." token="##VERSION##" value="${VERSION}" />
-                     <replace dir="." token="##BUILDID##" value="${BUILDID}" />
+                     <replace dir="." token="${VERSION}" value="${VERSION}" />
+                     <replace dir="." token="${BUILDID}" value="${BUILDID}" />
                      <replace dir="." token= "intro-omnetpp.png" value="intro-omnest.png" >
                         <include name="plugin.xml" />
                      </replace>
@@ -239,9 +239,10 @@
       <module>org.omnetpp.figures</module>
       <module>org.omnetpp.ide.nativelibs</module>
       <module>org.omnetpp.ide.nativelibs.linux.x86_64</module>
-      <module>org.omnetpp.ide.nativelibs.linux.aarch64</module>
-      <module>org.omnetpp.ide.nativelibs.macosx</module>
-      <module>org.omnetpp.ide.nativelibs.win32.x86_64</module>
+      <!-- Commenting out below builds due to shared library errors -->
+      <!-- <module>org.omnetpp.ide.nativelibs.linux.aarch64</module> -->
+      <!-- <module>org.omnetpp.ide.nativelibs.macosx</module> -->
+      <!-- <module>org.omnetpp.ide.nativelibs.win32.x86_64</module> -->
       <module>org.omnetpp.inifile.editor</module>
       <module>org.omnetpp.launch</module>
       <module>org.omnetpp.main</module>

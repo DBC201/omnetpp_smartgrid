@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <replace dir="." value="${VERSION}" token="${VERSION}"/>
+  <replace dir="." value="${BUILDID}" token="${BUILDID}"/>
+  <replace dir="." value="IS_COMMERCIAL = false;" token="IS_COMMERCIAL = true;">
+    <include name="**/*.java"/>
+  </replace>
+</target>
+</project>

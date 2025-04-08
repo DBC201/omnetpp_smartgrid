@@ -19,9 +19,12 @@
             <property name="startupMessageRect" value="10,20,500,25" />
             <property name="startupProgressRect" value="10,10,298,10" />
             <property name="aboutImage" value="/icons/about-image.png" />
-            <property name="windowImages" value="icons/logo16.png,icons/logo256.png" />
+            <property name="windowImages" value="icons/logo16.png,icons/logo32.png,icons/logo48.png,icons/logo64.png,icons/logo128.png,icons/logo256.png" />
             <property name="aboutText" value="%aboutText" />
-            <property name="preferenceCustomization" value="plugin_customization.ini" />
+            <property
+                  name="preferenceCustomization"
+                  value="plugin_customization.ini">
+            </property>
       </product>
    </extension>   
    <extension

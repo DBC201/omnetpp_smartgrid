@@ -5,7 +5,8 @@ Bundle-SymbolicName: org.omnetpp.scave.pychart;singleton:=true
 Bundle-Version: 6.0.3.qualifier
 Bundle-ClassPath: .,
  lib/py4j-0.10.9.3.jar,
- lib/pickle-1.0.jar
+ lib/pickle-1.0.jar,
+ lib/pyrolite-4.31.jar
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.omnetpp.scave.pychart.PyChartPlugin
@@ -15,13 +16,10 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.jface,
  org.omnetpp.common.core,
  org.omnetpp.common
-Export-Package: net.razorvine.examples,
- net.razorvine.pickle,
+Export-Package: net.razorvine.pickle,
  net.razorvine.pickle.objects,
- net.razorvine.pickle.test,
  net.razorvine.pyro,
  net.razorvine.pyro.serializer,
- net.razorvine.pyro.test,
  org.omnetpp.scave.pychart,
  py4j,
  py4j.commands,
