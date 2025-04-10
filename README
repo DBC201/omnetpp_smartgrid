@@ -2,7 +2,7 @@ This is a fork of OMNeT++ 6.0.3. The original repo along with the source code ca
 
 The purpose of this fork is to help simulating smart grid communications for research purposes.
 
-This has been built and tested for Linux OS's with x86_64 architecture. The release version with the ide pre built similar to the releases provided in OMNeT++ is available in the release section of this repository. It can also be downloaded by clicking [here](https://github.com/DBC201/omnetpp_smartgrid/releases/download/52ecc32/omnetpp_smartgrid-linux-x86_64.tgz).
+This has been built and tested for Linux OS's with x86_64 architecture. The release version with the ide pre built similar to the releases provided in OMNeT++ is available in the release section of this repository.
 
 Following changes were made to the original code:
 - IDE build was configured for development purposes: [f571189](https://github.com/DBC201/omnetpp_smartgrid/commit/f571189a4858f144fb0be291642409c25cc71535), [c34a543](https://github.com/DBC201/omnetpp_smartgrid/commit/c34a543340d44ebda450a58d2bb1f037daeb396d)
