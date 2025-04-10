@@ -82,6 +82,11 @@ public class InstallSimulationModelsDialog extends TitleAreaDialog {
                 projectDescriptionURLs.add(projectDescriptionURL);
             }
         }
+        
+        URL inet_smartgrid_description_url = new URL("https://raw.githubusercontent.com/DBC201/inet_smartgrid/refs/heads/master/download.xml");
+        ProjectDescription inet_smartgrid_description = ProjectDescription.download(inet_smartgrid_description_url);
+        projectDescriptions.add(inet_smartgrid_description);
+        projectDescriptionURLs.add(inet_smartgrid_description_url);
     }
 
     @Override

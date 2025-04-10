@@ -37,8 +37,10 @@ import org.omnetpp.ide.OmnetppMainPlugin;
  */
 public class FirstStepsDialog extends TitleAreaDialog {
     private Button installINETButton;
+    private Button installINETSmartgridButton;
     private Button importSamplesButton;
     private boolean isInstallINETRequested;
+    private boolean isInstallINETSmartgridRequested;
     private boolean isImportSamplesRequested;
 
     public FirstStepsDialog(Shell shell) {
@@ -48,6 +50,10 @@ public class FirstStepsDialog extends TitleAreaDialog {
 
     public boolean isInstallINETRequested() {
         return isInstallINETRequested;
+    }
+    
+    public boolean isInstallINETSmartgridRequested() {
+    	return isInstallINETSmartgridRequested;
     }
 
     public boolean isImportSamplesRequested() {
@@ -82,7 +88,15 @@ public class FirstStepsDialog extends TitleAreaDialog {
         			"not from the IDE. If you need INET, we suggest that you exit the IDE, install " +
         			"INET from the shell with the `opp_env install inet-latest` command, and then " +
         			"import it into the IDE.", 
-        			true);        	
+        			true); 
+        	installINETSmartgridButton = createCheckbox(group, "Install inet_smartgrid (not recommended, use opp_env instead)", false);
+        	createWrappingLabel(group,
+        			"CAUTION: We detected that the IDE and OMNeT++ was installed via opp_env. For consistency, " +
+        			"we recommend that you install simulation models and frameworks via opp_env, " +
+        			"not from the IDE. If you need INET, we suggest that you exit the IDE, install " +
+        			"INET from the shell with the `opp_env install inet-latest` command, and then " +
+        			"import it into the IDE.", 
+        			true); 
         }
         else {
         	installINETButton = createCheckbox(group, "Install INET Framework", true);
@@ -92,7 +106,13 @@ public class FirstStepsDialog extends TitleAreaDialog {
 					"technologies, support for wireless ad-hoc mobile networks, and much more. " +
 					"This option will download the latest matching INET release from http://inet.omnetpp.org, " +
 					"and install it into your workspace. Select it if you want to simulate communication networks.",
-					true);        	
+					true);   
+        	installINETSmartgridButton = createCheckbox(group, "Install inet_smartgrid", true);
+        	createWrappingLabel(group,
+        			"inet_smartgrid is a fork of inet++ with IEC61850 support and some other custom nodes for research purposes. " +
+					"This option will download the latest matching release from https://github.com/DBC201/inet_smartgrid, " +
+					"and install it into your workspace. Select it if you want to simulate smartgrid communication networks.",
+					true);   
         }
         
         importSamplesButton = createCheckbox(group, "Import OMNeT++ programming examples", true);
@@ -143,6 +163,8 @@ public class FirstStepsDialog extends TitleAreaDialog {
             importSampleProjects(false);
         if (installINETButton.getSelection())
             installINET();
+        if (installINETSmartgridButton.getSelection())
+        	installINETSmartgrid();
         super.okPressed();
     }
 
@@ -168,6 +190,26 @@ public class FirstStepsDialog extends TitleAreaDialog {
             InstallProjectJob installProjectJob = new InstallProjectJob(projectDescriptionURL, new ProjectInstallationOptions());
             installProjectJob.setUser(true);
             installProjectJob.schedule();
+            
+            isInstallINETSmartgridRequested = installINETSmartgridButton.getSelection();
+            URL projectDescriptionURL2 = new URL("https://raw.githubusercontent.com/DBC201/inet_smartgrid/refs/heads/master/download.xml");
+            InstallProjectJob installProjectJob2 = new InstallProjectJob(projectDescriptionURL2, new ProjectInstallationOptions());
+            installProjectJob2.setUser(true);
+            installProjectJob2.schedule();
+        }
+        catch (Exception e) {
+            OmnetppMainPlugin.logError("Error installing INET", e);
+            MessageDialog.openError(null, "Error", "Error installing INET Framework!");
+        }
+    }
+    
+    protected void installINETSmartgrid() {
+    	try {            
+            isInstallINETSmartgridRequested = installINETSmartgridButton.getSelection();
+            URL projectDescriptionURL2 = new URL("https://raw.githubusercontent.com/DBC201/inet_smartgrid/refs/heads/master/download.xml");
+            InstallProjectJob installProjectJob2 = new InstallProjectJob(projectDescriptionURL2, new ProjectInstallationOptions());
+            installProjectJob2.setUser(true);
+            installProjectJob2.schedule();
         }
         catch (Exception e) {
             OmnetppMainPlugin.logError("Error installing INET", e);
