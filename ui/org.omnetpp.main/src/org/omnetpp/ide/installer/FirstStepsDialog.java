@@ -1,3 +1,9 @@
+// Original file can be found in: https://github.com/omnetpp/omnetpp/tree/omnetpp-6.0.3
+// Changes are made in this commit: https://github.com/DBC201/omnetpp_smartgrid/commit/e8055b00196072b4305e4da9546c82002fbdf604
+// This did not have a license declaration
+// Modified by Deniz Cakiroglu on April 9, 2025
+// added hardcoded inet_smartgrid installation
+
 package org.omnetpp.ide.installer;
 
 import java.io.File;

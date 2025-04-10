@@ -1,3 +1,8 @@
+// Original file can be found in: https://github.com/omnetpp/omnetpp/tree/omnetpp-6.0.3
+// Changes are made in this commit: https://github.com/DBC201/omnetpp_smartgrid/commit/f571189a4858f144fb0be291642409c25cc71535
+// This did not have a license declaration
+// Modified by Deniz Cakiroglu on April 6, 2025
+// commented out specialize_std_map_on_both(int,,,,int,,,);
 %module EventLogEngine
 
 // covariant return type warning disabled

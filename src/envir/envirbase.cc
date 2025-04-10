@@ -13,6 +13,11 @@
   `license' for details on this and other legal matters.
 *--------------------------------------------------------------*/
 
+// Modified by Deniz Cakiroglu on April 10, 2025
+// Increased Vector Buffer size to 256MiB
+// Increased Output Vector Memory Limit to 1GiB
+// https://github.com/DBC201/omnetpp_smartgrid/commit/38eb53cece2c06ec9ca67f20494327962ceada29
+
 #include <cstdio>
 #include <csignal>
 #include <fstream>
