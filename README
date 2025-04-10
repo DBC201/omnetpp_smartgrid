@@ -1,3 +1,16 @@
+This is a fork of OMNeT++ 6.0.3. The original repo along with the source code can be found at: https://github.com/omnetpp/omnetpp/tree/omnetpp-6.0.3
+
+The purpose of this fork is to help simulating smart grid communications for research purposes.
+
+This has been built and tested for Linux OS's with x86_64 architecture. The release version with the ide pre built similar to the releases provided in OMNeT++ is available in the release section of this repository.
+
+Following changes were made to the original code:
+- IDE build was configured for development purposes: [f571189](https://github.com/DBC201/omnetpp_smartgrid/commit/f571189a4858f144fb0be291642409c25cc71535), [c34a543](https://github.com/DBC201/omnetpp_smartgrid/commit/c34a543340d44ebda450a58d2bb1f037daeb396d)
+- A hardcoded link to [inet_smartgrid](https://github.com/DBC201/inet_smartgrid) was added so that it can be set up with ease: [e8055b0](https://github.com/DBC201/omnetpp_smartgrid/commit/e8055b00196072b4305e4da9546c82002fbdf604)
+- Vector buffer and vector memory limit was increased to support low delay SV packet traffic defined by IEC61850: [38eb53c](https://github.com/DBC201/omnetpp_smartgrid/commit/38eb53cece2c06ec9ca67f20494327962ceada29)
+
+---Below is the continuation to the original readme.---
+
 OMNeT++
 ~~~~~~~
 
