@@ -116,8 +116,8 @@
 
 #define DEFAULT_OUTPUT_SCALAR_PRECISION    "14"
 #define DEFAULT_OUTPUT_VECTOR_PRECISION    "14"
-#define DEFAULT_OUTPUT_VECTOR_MEMORY_LIMIT "16MiB"
-#define DEFAULT_VECTOR_BUFFER              "1MiB"
+#define DEFAULT_OUTPUT_VECTOR_MEMORY_LIMIT "1Gib"
+#define DEFAULT_VECTOR_BUFFER              "256MiB"
 
 using namespace omnetpp::common;
 using namespace omnetpp::internal;
